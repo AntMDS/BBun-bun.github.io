@@ -1,0 +1,280 @@
+/****General styling****/
+
+/* body general*/
+body {
+    margin: 0%;
+}
+
+.background {
+    background-image: url(../Images/Background.jpg);
+    filter:grayscale(100%);
+    z-index: 1;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: "Courier New", monospace;
+    text-align: center;
+    margin-top: 3%;
+    color: white;
+}
+
+h1:hover {
+    filter:grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.white-text {
+    color:white;
+}
+
+p {
+    font: "Courier New", monospace bold;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+p:hover {
+    transition:transform 1s;
+    transform: scale(1.01);
+}
+
+.center {
+    text-align: center;
+}
+
+.center:hover {
+    transition: transform 2s;
+    transform:scale(1.1);
+}
+
+a {
+    color:hotpink
+}
+
+q {
+    font-style: italic bold;
+}
+
+img {
+    filter: grayscale(70%);
+    border-radius: 15px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    filter: grayscale(5%);
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        Margin-top: 150px;
+    }
+}
+
+footer {
+    padding: 2%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/**** end of General styling****/
+
+/****Nav bar styling****/
+
+.Navbar {
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3%;
+    z-index: 2;
+    -webkit-animation: moveNav 3s;
+    animation: moveNav 3s;
+}
+
+@keyframes moveNav {
+    from{top: -100vw;}
+    top{top: 0vw;}
+}
+
+.Navbar a {
+    float: right;
+    display: block;
+    color: white;
+    padding: 14px 10px;
+    text-decoration: none;
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNavText 3.75s;
+    animation: moveNavText 3.75s;
+}
+
+@keyframes moveNavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+@media screen and (max-width:576px) {
+    .Navbar a{
+        width:25%;
+        font-size:12px;
+    }
+}
+
+.Navbar a:hover {
+    background-color: rgba(255,255,255,0.5);
+    color:white;
+    font-weight: bold;
+}
+
+/****Video styling****/
+
+/*Background video*/
+.Video_container {
+    position: absolute;
+    z-index: -1;
+}
+
+#Background_video {
+    right: 0;
+    bottom: 0;
+    min-width: 100;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+
+/*screens lower then 576 will not show the video*/
+@media screen and (max-width: 576px) {
+    #Background_video {
+        display:none;
+    }
+}
+
+/* text over video */
+.Video_Text {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top:0vw;}
+}
+
+/****End of video styling****/
+
+/****Table styling****/
+
+* {
+    box-sizing: border-box;
+}
+
+.Column_1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%;
+    height: 400px;
+    background-color: rgba(50, 50, 50, 0.86);
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+@media screen and (max-wdith:576) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: rgba(20,20,20,0.8);
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+.Row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/****End of table styling****/
+
+/****Contact form styling****/
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 8px 8px 8px 15px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: 'Times New Roman', Times, serif bold;
+}
+
+input[type=text]:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5) inset;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+input[type=submit] {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: black;
+    border-radius: 8px 8px 8px 15px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Times New Roman', Times, serif bold;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.5);
+    transition: transform 1.5s;
+}
+
+form {
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+

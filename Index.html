@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="utf-8">
+        <title>My portfolio website</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="./CSS/stylesheet.css">
+    </head>
+    <!--end of Head-->
+
+    <!--body-->
+    <body class="background">
+
+        <!--Nav bar-->
+        <div class="Navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">Github</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <!-- end of Nav bar-->
+    
+        <br>
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="home" class="Video_container">
+            <video autoplay muted loop id="Background_video">
+                <source src="Images/Videos/Background_video.mp4" type="video/mp4">
+                your broweser doesnt support HTML5 video.
+            </video>
+        </div>
+        <!--end of Background video-->
+
+        <!--Background video text-->
+        <div class="Video_Text">
+            <h1 class="white-text">Anthony Matos Dos Santo's Portfolio</h1>
+            <strong>
+                <p class="center" class="white-text">
+                    <q>
+                        Programmers are important because they drive innovation, enable automation and efficiency, facilitate digital transformation, solve complex problems, enhance user experiences, ensure security, and contribute to the continuous advancement of technology. Their skills and expertise are integral to the success of businesses, industries, and the overall progression of society.
+                    </q>
+                    <br>
+                    <br>
+                    <br>My name is Anthony Matos Dos Santos, this is my portfolio website, on it i will tell you about my background and experience in the programming design and development field.
+                    <br>
+                    <br>Thank you for viewing my website!
+                </p>
+            </strong>
+        </div>
+        <!--end of Background video text-->
+        <div class="background">
+            <!--About section-->
+            <div class="Row" id="about">
+                <!--Left collum-->
+                <div class="Column_2">
+                    <img src="./Images/Coding.png" alt="An image about game/software and web development">
+                </div>
+                <!--right collum-->
+                <div class="Column_1 white-text">
+                    <h1>About</h1>
+                    <p>
+                        I am a software developer, i love to create and code, i have been studying game design and development most of my life and have deicded to learn software development as well to expand my skill set!
+                        <br>
+                        <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+                        <br>
+                        <br>I am a full-stack developer who would love to work with you on your project <a href="#Contact">Contact</a> me here.
+                    </p>
+                </div>
+            </div>
+
+            <!--end of About section-->
+
+            <!--GitHub section-->
+            <div class="Row" id="github">
+                <!--Left collum-->
+                <div class="Column_1 white-text">
+                    <h1>GitHub</h1>
+                    <p>
+                        You can see all of my code projects on my GitHub profile found here:
+                        <br>
+                        <p class="center"><a href="https://github.com/BBun-bun" target="_blank">My Github profile</a></p>
+                    </p>
+                </div>
+                <!--right collum-->
+                <div class="Column_2">
+                    <a href="https://github.com/BBun-bun" target="_blank"></a><img src="./Images/GitHub.png" alt="GitHub Logo"></a>
+                </div>
+            </div>
+            <!--end of Github section-->
+            
+            <!--Contact section-->
+            <div class="Row" id="contact">
+                <!--Contact image, left column-->
+                <div class="Column_2 Column_tall">
+                    <img src="./Images/Contact.png" alt="Conact image">
+                </div>
+                <!--Contact form, right column-->
+                <div class="Column_1 Column_tall white-text">
+                    <h1>Contact</h1>
+                    <form action="https://formspree.io/f/xrgvnldn" method="POST">
+                        <label>Name:</label>
+                            <input type="text" placeholder="Pleae enter your name here">
+                        <label>Email:</label>
+                            <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                        <label>Message:</label>
+                            <input type="text" id="Message" name="Message" placeholder="Please leave a message">
+                            <input type="submit" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+            <!--end of contact section-->
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">&copy Website developed by Anthony Matos Dos Santos, <a href="#contact" target="_blank">contact me here</a></p>
+            </p>
+        </footer>
+        <!--end of Footer section-->
+    </body>
+    <!--end of body-->
+</html>
