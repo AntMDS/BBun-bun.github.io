@@ -6,6 +6,7 @@
         <title>My portfolio website</title>
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" type="text/css" href="./CSS/stylesheet.css">
+        <script src="./JS/portfolio.js"></script>
     </head>
     <!--end of Head-->
 
@@ -51,7 +52,58 @@
             </strong>
         </div>
         <!--end of Background video text-->
-        <div class="background">
+        <!--Slide show section-->
+        <div id="slideshow">
+            <div id="slideshow_bg">
+                <div id="slideshow_container">
+                    <!--Slide 1-->
+                    <div class = "mySlides fade">
+                        <img class="slideshow_images" src="Images/73093315_929705744075323_4389818006599892992_n.jpg" alt="Picture of me">
+                        <div class="text">I'm avaliable to help on any project in my capabilities</div>
+                    </div>
+                    <!--Slide 2-->
+                    <div class = "mySlides fade">
+                        <img class="slideshow_images" src="Images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos">
+                        <div class="text">I am a full-stack software developer, trained in: HTML, CSS, JavaScript</div>
+                    </div>
+                    <!--Slide 3-->
+                    <div class = "mySlides fade">
+                        <img class="slideshow_images" src="Images/coding_icon.png" alt="coding img">
+                        <div class="text">JavaScript has been my favourite lanuage to work with so far</div>
+                    </div>
+                    <!--Slide 4-->
+                    <div class = "mySlides fade">
+                        <img class="slideshow_images" src="Images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC</div>
+                    </div>
+                    <!--Slide 5-->
+                    <div class = "mySlides fade">
+                        <img class="slideshow_images" src="Images/SQL_and_Database.jpg" alt="SQL logo">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <!--Slide 6-->
+                    <div class = "mySlides fade">
+                        <img class="slideshow_images" src="Images/calleMe.jpg" alt="image of a phone">
+                        <div class="text"><a class="white-text contact" onclick="openForm()">I can be contacted right away</a></div>
+                    </div>
+                    <!-- next and previous buttons-->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a> 
+                </div>
+                <br>
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+
+        <!--Slide show section end-->
+        <div>
             <!--About section-->
             <div class="Row" id="about">
                 <!--Left collum-->
@@ -62,11 +114,13 @@
                 <div class="Column_1 white-text">
                     <h1>About</h1>
                     <p>
-                        I am a software developer, i love to create and code, i have been studying game design and development most of my life and have deicded to learn software development as well to expand my skill set!
-                        <br>
-                        <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
-                        <br>
-                        <br>I am a full-stack developer who would love to work with you on your project <a href="#Contact">Contact</a> me here.
+                        I am a software developer, i love to create and code, i have been studying game design and development most of my life and have deicded to learn software development as well to expand my skills
+                    </p>
+                    <p>
+                        I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+                    </p>
+                    <p>
+                        I am a full-stack developer who would love to work with you on your project <a href="#Contact">Contact</a> me here.
                     </p>
                 </div>
             </div>
@@ -90,29 +144,26 @@
                 </div>
             </div>
             <!--end of Github section-->
-            
-            <!--Contact section-->
-            <div class="Row" id="contact">
-                <!--Contact image, left column-->
-                <div class="Column_2 Column_tall">
-                    <img src="./Images/Contact.png" alt="Conact image">
-                </div>
-                <!--Contact form, right column-->
-                <div class="Column_1 Column_tall white-text">
-                    <h1>Contact</h1>
-                    <form action="https://formspree.io/f/xrgvnldn" method="POST">
-                        <label>Name:</label>
-                            <input type="text" placeholder="Pleae enter your name here">
-                        <label>Email:</label>
-                            <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                        <label>Message:</label>
-                            <input type="text" id="Message" name="Message" placeholder="Please leave a message">
-                            <input type="submit" value="SUBMIT">
-                    </form>
-                </div>
+        </div>>
+        <!--Contact section-->
+        <div id="contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <h1>Contact</h1>
+                <form action="https://formspree.io/f/xrgvnldn" method="POST" class="form-container">
+                    <label for="name" >Name:</label>
+                        <input type="text" placeholder="Pleae enter your name here">
+                    <label for="email" >Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label for="message" >Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please leave a message">
+
+                        <button type="submit" class="btn">SUBMIT</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
             </div>
-            <!--end of contact section-->
         </div>
+        <!--end of contact section-->
 
         <!--Footer section-->
         <footer>

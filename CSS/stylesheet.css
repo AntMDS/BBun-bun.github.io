@@ -1,14 +1,17 @@
 /****General styling****/
 
-/* body general*/
+/* body general */
 body {
     margin: 0%;
 }
 
 .background {
     background-image: url(../Images/Background.jpg);
-    filter:grayscale(100%);
+
     z-index: 1;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 10px;
 }
 
 h1 {
@@ -97,9 +100,9 @@ footer {
     background-color: rgba(0,0,0,0.8);
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 3%;
-    z-index: 2;
+    width: 82.2%;
+    height: 4.9%;
+    z-index: 1030;
     -webkit-animation: moveNav 3s;
     animation: moveNav 3s;
 }
@@ -147,14 +150,17 @@ footer {
 .Video_container {
     position: absolute;
     z-index: -1;
+    overflow: hidden;
 }
 
 #Background_video {
     right: 0;
     bottom: 0;
+    object-fit: cover;
     min-width: 100;
     z-index: -1;
-    width: 100%;
+    width: 1004px;
+    aspect-ratio: 5.3 / 2;
     height: auto;
 }
 
@@ -182,6 +188,110 @@ footer {
 
 /****End of video styling****/
 
+/****Slide show styling****/
+#slideshow_bg {
+    background: rgba(20,20,20,0.8);
+}
+
+.mySlides {
+    display: none;
+}
+
+#slideshow_container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+#slideshow_container a {
+    text-decoration: none;
+}
+
+.slideshow_images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.75);
+    width: 100%;
+}
+
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    color: darkgrey;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw; 
+    background-color: rgba(0, 0, 0, 0.75); 
+    font-weight: bold;
+    border-radius: 0px 0px 7px 7px; 
+}
+
+.dot {
+    cursor: pointer; 
+    height: 1vw; 
+    width: 1vw;
+    margin: .25vw; 
+    background-color: white; 
+    border-radius: 50%; 
+    display: inline-block; 
+    transition: background-color 0.6s ease; 
+    z-index: 1; 
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+    background-color: black; 
+}
+
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade; 
+    animation-duration: 1.5s; 
+    -webkit-animation-name: fade; 
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;} 
+    to {opacity: 1;} 
+}
+
+@keyframes fade {
+    from {opacity: .4;} 
+    to {opacity: 1;} 
+}
+
+/****End of Slide show styling****/
+
 /****Table styling****/
 
 * {
@@ -190,13 +300,14 @@ footer {
 
 .Column_1 {
     float: left;
-    width: 50%;
+    width: 48%;
+    margin: 1%;
     padding: 10px;
     padding-top: 3%;
     height: 400px;
     background-color: rgba(50, 50, 50, 0.86);
     border-radius: 25px;
-    margin-top: 15px;
+    line-height: 1.2em;
 }
 
 @media screen and (max-wdith:576) {
@@ -207,13 +318,13 @@ footer {
 
 .Column_2 {
     float: left;
-    width: 50%;
+    width: 48%;
+    margin: 1%;
     padding: 10px;
     padding-top: 1.9%;
     height: 400px;
     background-color: rgba(20,20,20,0.8);
     border-radius: 25px;
-    margin-top: 15px;
 }
 
 .Column_tall {
@@ -231,43 +342,31 @@ footer {
 
 /****Contact form styling****/
 
-input[type=text] {
+.form-popup {
+    z-index: 8;
+    display: none; 
+    position: fixed; 
+    bottom: .5vw; 
+    right: .5vw; 
+}
+
+.form-container {
+    max-width: 49vw; 
+    padding: 1vw; 
+    background-color:rgba(20,20,20,0.8); 
+}
+
+.form-container input[type=text] {
     width: 100%;
-    padding: 12px;
+    padding: .92vw;
     border: 1px solid black;
     border-radius: 8px 8px 8px 15px;
     box-sizing: border-box;
+    background: darkgrey;
     margin-top: 6px;
     margin-bottom: 16px;
-    resize: vertical;
+    font-size: 1vw;
     font-family: 'Times New Roman', Times, serif bold;
-}
-
-input[type=text]:hover {
-    box-shadow: 0 0 5px rgba(0,0,0,0.5) inset;
-    transform: scale(1.1);
-    transition: transform 0.5s;
-}
-
-input[type=submit] {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-    font-weight: bold;
-    padding: 12px 20px;
-    border: black;
-    border-radius: 8px 8px 8px 15px;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Times New Roman', Times, serif bold;
-}
-
-input[type=submit]:hover {
-    background-color: white;
-    color: black;
-    transform: scale(1.5);
-    transition: transform 1.5s;
 }
 
 form {
@@ -277,4 +376,43 @@ form {
     font-family: 'Times New Roman', Times, serif;
 }
 
+button {
+    font-family: "Trebuchet MS", Optima;
+    letter-spacing: .3vw; 
+    font-size: 1.5vw; 
+    font-weight: bold; 
+    padding: 1.5vw; 
+    cursor: pointer;
+    width: 100%; 
+    height: auto; 
+}
 
+button:hover, .form-container .btn:hover {
+    color: white; 
+    background-color: black; 
+    transition-duration: 1s; 
+    -webkit-transition-duration: 1s; 
+    border-color: silver;
+}
+
+
+.form-container .btn {
+    background-color: white; 
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+.form-container .cancel:hover {
+    color: white;
+    background-color: darkred;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
+}
